@@ -1,0 +1,12 @@
+﻿@model MVC_ViewModels_Data.Models.City
+<div class="Container">
+    <a onclick="deletePerson('Country', '@Model.CityId')">@Model.Name</a>
+    @if (Model.Peoples.Count != 0)
+    {
+        <p>Persons:</p>
+        @foreach (var person in Model.Peoples)
+        {
+            <p>@person.Name</p>
+        }
+    }
+</div>

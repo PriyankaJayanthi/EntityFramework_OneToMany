@@ -1,0 +1,7 @@
+﻿@model MVC_ViewModels_Data.Models.CityViewModel
+<div class="col" id="container">
+    @foreach (var item in Model.List)
+    {
+        <partial name="_City" for="@item" />
+    }
+</div>
