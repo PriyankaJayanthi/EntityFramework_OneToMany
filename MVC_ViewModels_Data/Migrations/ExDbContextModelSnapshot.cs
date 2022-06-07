@@ -105,8 +105,10 @@ namespace MVC_ViewModels_Data.Migrations
                         .HasMaxLength(15);
 
                     b.Property<string>("ContactNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50)
+                        .HasDefaultValue("");
 
                     b.Property<string>("Name")
                         .IsRequired()

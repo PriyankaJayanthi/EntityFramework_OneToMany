@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MVC_ViewModels_Data.Migrations
 {
     [DbContext(typeof(ExDbContext))]
-    [Migration("20220606172420_InitialCreate")]
+    [Migration("20220607153027_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -107,8 +107,10 @@ namespace MVC_ViewModels_Data.Migrations
                         .HasMaxLength(15);
 
                     b.Property<string>("ContactNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50)
+                        .HasDefaultValue("");
 
                     b.Property<string>("Name")
                         .IsRequired()

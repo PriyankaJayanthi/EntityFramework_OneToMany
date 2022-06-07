@@ -12,7 +12,9 @@ namespace MVC_ViewModels_Data.Data
         public ExDbContext(DbContextOptions<ExDbContext> options) : base(options)
         { }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {             
+        {
+            modelBuilder.Entity<Person>().Property(p => p.ContactNumber).HasMaxLength(50).HasDefaultValue(string.Empty);
+
             //countries
             Country England = new Country() { CountryId = 1, Name = "England" };
             Country Sweden = new Country() { CountryId = 2, Name = "Sweden" };

@@ -1,5 +1,5 @@
 ﻿@model MVC_ViewModels_Data.Models.Country
-<div class="Container">
+
     <a onclick="deletePerson('Country', '@Model.CountryId')">@Model.Name</a>
     <br />
     @if (Model.Cities.Count != 0)
@@ -13,4 +13,3 @@
     }
     <br />
     <br />
-</div>

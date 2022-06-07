@@ -19,11 +19,9 @@ namespace MVC_ViewModels_Data.Models
         [MaxLength(20)]
         [MinLength(1)]
         public string Name { get; set; }
-  
 
-        [Required]
         [Range(10,12)]
-        public string ContactNumber { get; set; }
+        public string  ContactNumber { get; set; }
 
         [Required]
         [MaxLength(15)]

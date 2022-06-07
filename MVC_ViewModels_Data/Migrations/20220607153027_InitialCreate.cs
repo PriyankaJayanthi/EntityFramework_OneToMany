@@ -46,7 +46,7 @@ namespace MVC_ViewModels_Data.Migrations
                     PersonId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(maxLength: 20, nullable: false),
-                    ContactNumber = table.Column<string>(nullable: false),
+                    ContactNumber = table.Column<string>(maxLength: 50, nullable: true, defaultValue: ""),
                     CityId = table.Column<int>(maxLength: 15, nullable: false)
                 },
                 constraints: table =>
